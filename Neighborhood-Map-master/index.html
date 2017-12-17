@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<!-- start head -->
+<head>
+
+	<meta charset="utf-8">    
+    <meta name="viewport" content="width =device-width, initial-scale=1.0">
+	<title>Neighborhood Map</title>
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/normalize.css"> 
+    <link rel="stylesheet" href="css/bootstrap.css">
+
+
+	<!-- for mobile and tablet -->
+
+	<!-- All Scripts -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+
+
+	</script>
+	<script src='http://ajax.microsoft.com/ajax/jquery.templates/beta1/jquery.tmpl.min.js'>
+
+
+	</script>
+	<!-- load javascript file -->
+	<script type="text/javascript" src="js/app.js"></script>
+	<!-- load Knockout -->
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/knockout/1.2.1/knockout-min.js">
+
+
+	</script>
+	<!-- load Map -->
+	<script async defer src="https://maps.googleapis.com/maps/api/js?key=&callback=myMap&libraries=places" onerror="error()">
+
+
+	</script>
+</head>
+
+<!-- start body -->
+
+<body>
+	<!-- this block contains all locations and filter locations -->
+    <header id="header">
+      <h1>Beautiful Places In Egypt </h1>
+    </header>
+	<div id="markerList">
+        <header class="header">
+      <h2>Bart Locations </h2>
+    </header>
+		<input placeholder="Station location…" type="text"  data-bind="textInput: query, valueUpdate: 'keyup'" autocomplete="off">
+		<div class="content">
+			<!-- unorder list -->
+			<ul data-bind="template: {name:'locations', foreach:locations}">
+			</ul>
+		</div>
+		<script data-proofer-ignore type="text/html" id="locations">
+			<li class="li" data-bind="attr:{id:title},text:title,click:whatClicked">
+			</li>
+		</script>
+	</div>
+
+	<!-- this block for display googleMap -->
+	<div id="googleMap"></div>
+
+</body>
+
+</html>

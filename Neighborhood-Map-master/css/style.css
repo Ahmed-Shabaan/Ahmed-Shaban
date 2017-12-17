@@ -1,0 +1,77 @@
+body,
+html {
+    padding: 0;
+    margin: 0;
+	height: 100%;
+	width: 100%;
+	font-family: sans-serif , Arial ;
+	
+}
+#header
+{
+    display: flex;
+    flex-flow: column nowrap;
+    text-align: left;
+    width: 100%;
+    background-color:black; 
+    color: #FFF;
+    text-indent: 650px;
+     margin: auto;
+}  
+.header
+{
+    text-align: center;
+    color: #FFF;
+}
+#navbar {
+	background-color :#525c65;
+	margin :0;
+	padding:0;
+}
+
+#googleMap {
+	position: fixed;
+	width: 75%;
+	height: 100%;
+	top: 0;
+	bottom: 0;
+	left: 25%;
+	overflow: scroll;
+}
+
+#markerList {
+	position: fixed;
+	background-color: black;
+	width: 24%;
+	height: 100%;
+	top: 0;
+	bottom: 0;
+	border: 3px solid #DDD;
+	overflow: scroll;
+	color: #CCC;
+}
+
+input {
+	width: 98%;
+	margin-left: .5%;
+	margin-right: .5%;
+	margin-top: .5%;
+	font-size: 20px;
+	font-weight: bold;
+}
+
+.li {
+	width: 80%;
+	height: 20%;
+	margin-left: .5%;
+	margin-right: .5%;
+	margin-top: 2%;
+	font-size: 20px;
+	font-weight: bold;
+}
+input:hover ,
+li:hover
+{
+	color: white;
+	background-color: #525c65;
+}
