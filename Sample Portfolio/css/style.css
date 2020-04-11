@@ -1,0 +1,742 @@
+/* public */
+*
+{
+    margin: 0; 
+    padding :0;
+    box-sizing: border-box;
+    text-transform: capitalize;
+}
+
+/* Body */
+body 
+{
+    font-family: Tahoma, Arial; 
+    height: 2000px;
+}
+/* Container */
+.container
+{
+    width:80%;
+    margin: 0 auto;
+}
+.navbar
+{
+    padding: 10px 0;
+    overflow: hidden;
+    background-color: #ffffff;
+    position: relative;
+}
+.navbar .logo
+{
+    float: left;
+    width: 50%;
+}
+.navbar .logo h2
+{
+    font-size: 30px;
+    font-weight: bold;
+}
+.navbar input , .navbar label
+{
+    position: absolute;
+    top: 12px;
+    right: 25px;
+}
+.navbar input
+{
+    display: none;
+}
+.navbar label
+{
+    display: block;
+    width: 15px;
+    height: 15px;
+    background-image: url("../images/navbar/open.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 20px;
+    cursor: pointer;
+}
+.navbar input:checked ~ .list
+{
+    display: block;
+}
+.navbar input:checked ~ label
+{
+    background-image: url("../images/navbar/close.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.navbar .logo span
+{
+    color: teal;
+}
+.navbar .list
+{
+    float: right;
+    width: 50%;
+    list-style: none;
+}
+.navbar .list li
+{
+    display: inline-block;
+}
+.navbar .list li a
+{
+    display: block;
+    text-decoration: none;
+    color: #222;
+    font-weight: bold;
+    padding: 10px 15px;   
+}
+.navbar .list li a:hover
+{
+    color: #eb5424;
+}
+@media (min-width:1351px)
+{
+    .navbar label
+    {
+        display: none;
+    }
+}
+
+@media (max-width:1350px)
+{
+    .navbar .logo
+    {
+        width: 100%;
+        float: none;
+    }
+    .navbar .list
+    {
+        width: 100%;
+        float: none;
+        display: none;
+    }
+    .navbar .list li
+    {
+        display:block;
+        text-align: center;
+    }    
+    
+}
+/* Home */
+.home
+{
+    height: 500px;
+    background-image: url('../images/Home/home-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    text-align: center;
+}
+.home-infomation
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.home-infomation .home-title
+{
+    font-size: 60px;
+    color: #888;
+    margin-bottom: 20px;
+}
+.home-infomation .home-info
+{
+    font-size: 40px;
+    color: #eb5424;
+    margin-bottom: 20px;
+}
+.home-infomation .home-desc
+{
+    line-height: 1.6;
+    color: #888;
+    margin-bottom: 20px;
+}
+.home-infomation .home-btn
+{
+    background-color: #eb5424;
+    color: #fff;
+    width: 150px;
+    padding: 20px;
+    font-size: 20px;
+    border: 0;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: border 1s;
+}
+.home-infomation .home-btn:hover
+{
+    background-color: #ffffff;
+    color: #eb5424;
+}
+
+
+@media (max-width:905px)
+{
+    .home-infomation .home-title
+    {
+        font-size: 40px;
+        color: #fff;
+    }
+    .home-infomation .home-info
+    {
+        font-size: 25px;
+    }
+    .home-infomation .home-desc
+    {
+        font-size: 15px;
+    }
+    .home-infomation .home-btn
+    {
+        width: 120px;
+        padding: 12px;
+        font-size: 12px;
+    }
+}
+@media (max-width:420px)
+{
+    .home-infomation .home-title
+    {
+        font-size: 20px;
+        color: #fff;
+    }
+    .home-infomation .home-info
+    {
+        font-size: 15px;
+    }
+    .home-infomation .home-desc
+    {
+        font-size: 10px;
+    }
+    .home-infomation .home-btn
+    {
+        width: 80px;
+        padding: 10px;
+        font-size: 10px;
+    }
+}
+/* Work  */
+.work
+{
+    overflow: hidden;
+    padding: 50px 0;
+    background-color: #FFF;
+}
+.work .work-title
+{
+    font-size: 60px;
+    margin-bottom: 20px;
+}
+.work .work-title span
+{
+    font-weight: normal;
+}
+.work .part
+{
+    border: 1px solid #888;
+    height: auto;
+    text-align: center;
+    float: left;
+    width: 30%;
+    padding: 50px 0;
+    text-align: center;
+    box-sizing: border-box;
+    margin-left: 5%;
+}
+.work .first
+{
+    margin-left: 0;
+}
+.part .icon
+{
+    color: #888;
+    margin-bottom: 20px;
+}
+.part .part-title
+{
+    color: #eb5424;
+    margin-bottom: 20px;
+}
+.part .line
+{
+    width: 60%;
+    margin: auto;
+    margin-bottom: 20px;
+}
+.part .part-desc
+{
+    color: #888;
+    margin-bottom: 20px;
+    font-size: 14px;
+    line-height: 1.6;
+    padding: 20px;
+}
+@media (max-width:780px)
+{
+    .work .part
+    {
+        width: 47%;
+        margin-bottom:15px;
+    }
+    .work .work-title
+    {
+        font-size: 50px;
+    }
+    .work .last
+    {
+        margin-left: 0;
+    }
+}
+@media (max-width:575px)
+{
+    .work .part
+    {
+        width: 100%;
+        float: none;
+        margin-left: 0;
+
+    }
+    .work .work-title
+    {
+        font-size: 40px;
+    }
+}
+
+/* Portfolio */
+.portfolio
+{
+    padding-top: 10px;
+    background-color: #f8f8f8;
+    overflow: hidden;
+}
+.portfolio .portfolio-title
+{
+    text-align: center;
+    font-size: 35px;
+}
+.portfolio .portfolio-title span
+{
+    font-weight: normal;
+}
+.portfolio .portfolio-list
+{
+    list-style: none;
+    text-align: center;
+    margin: 20px 0;
+}
+.portfolio .portfolio-list .portfolio-item
+{
+    display: inline-block;
+    width: 100px;
+    padding: 10px;
+}
+.portfolio .portfolio-list .portfolio-item.active
+{
+    background-color: #eb5424;
+    color: #fff;
+}
+.portfolio .portfolio-list .portfolio-item.hover:hover
+{
+    background-color: #eb5424;
+    color: #fff;
+}
+.box .img 
+{
+    float: left;
+    width: 25%;
+    font-size: 0;
+    position: relative;
+}
+.box img
+{
+    width: 100%;
+    
+}
+.box .img .overlay
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    font-size: 15px;
+    background-color: rgba(235, 84, 36, 0.5);
+    opacity: 0;
+}
+.box .img .overlay span
+{
+    position: absolute;
+    border: 2px solid #eb5424;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: #fff;
+    display: block;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+.box .img:hover .overlay
+{
+    opacity: 1;
+}
+
+/* Media Query */
+@media (max-width:575px)
+{
+    .portfolio .portfolio-list .portfolio-item
+    {
+        display: block;
+        margin: auto;
+    }
+    .portfolio .portfolio-list .portfolio-item.active
+    {
+        margin-bottom: 5px;
+    }
+    .box .img
+    {
+        width: 100%;
+        margin-bottom: 5px;
+    }
+}
+@media (min-width:576px) and (max-width:768px)
+{
+    .box .img
+    {
+        width: 50%;
+    }
+}
+
+/* Profile Skills */
+.profile_skills {
+    padding: 50px 0;
+    overflow: hidden;
+}
+
+.profile_skills .profile {
+    width: 50%;
+    float: left;
+}
+
+.profile_skills .profile .profile-list {
+    list-style: none
+}
+
+.profile_skills .profile .profile-list .profile-item {
+    margin-bottom: 8px
+}
+
+.profile_skills .profile .profile-list .profile-item span{
+    display: inline-block;
+    width: 100px;
+    font-weight: bold
+}
+
+.profile_skills .profile .profile-list .profile-item span.web {
+    font-weight: normal;
+    color: #eb5424
+}
+
+.profile_skills .skills {
+    width: 50%;
+    float: left;
+}
+
+.profile_skills .skills .skills-desc {
+    font-size: 15px;
+    color: #888;
+    line-height: 1.5;
+    margin-bottom: 20px
+}
+
+.profile_skills .skills .bar {
+    overflow: hidden;
+    padding: 10px 0;
+    margin-bottom: 10px
+}
+
+.profile_skills .skills .bar .title {
+    float: left;
+}
+
+.profile_skills .skills .bar .perc {
+    float: right;
+    margin-right: 100px
+}
+
+.profile_skills .skills .bar .parent {
+    height: 2px;
+    clear: both;
+    background: #f8f8f8;
+    position: relative;
+    top: 5px
+}
+
+.profile_skills .skills .bar .parent span {
+    background: #eb5424;
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    bottom: 0
+}
+
+.profile_skills .skills .bar .parent span.sp1 {
+    width: 100%;
+}
+
+.profile_skills .skills .bar .parent span.sp2 {
+    width: 90%;
+}
+
+.profile_skills .skills .bar .parent span.sp3 {
+    width: 80%;
+}
+
+.profile_skills .profile .profile-title,
+.profile_skills .skills .skills-title{
+    font-size: 40px; 
+    margin-bottom: 20px
+}
+
+.profile_skills .profile .profile-title span,
+.profile_skills .skills .skills-title span{
+    font-weight: normal;
+}
+
+@media (max-width:768px) {
+    .profile_skills .profile , 
+    .profile_skills .skills {
+        width: 100%;
+        float: none
+    }
+    .profile_skills .profile {
+        margin-bottom: 20px
+    }
+}
+
+/*
+    ===============================
+            Creative Styles
+    ===============================
+*/
+
+.creative {
+    height: 500px;
+    background: url('../images/creative/about-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed
+}
+
+.creative .creative-info {
+    padding-top: 100px;
+    width: 50%;
+    float: right;
+}
+
+.creative .creative-info .info-title {
+    font-weight: bold;
+    font-size: 50px
+}
+
+.creative .creative-info .info-title span {
+    font-weight: normal
+}
+
+.creative .creative-info .info-dir {
+    font-size: 40px;
+    color: #eb5424;
+    margin-bottom: 20px
+}
+
+.creative .creative-info .info-desc {
+    color: #000;
+    margin-bottom: 15px;
+    line-height: 1.8
+}
+
+.creative .creative-info .info-desc a {
+    text-decoration: none
+}
+
+@media (max-width:991px) {
+    .creative {
+        height: auto
+    }
+    .creative .creative-info {
+        width: 100%;
+        padding-top: 10px;
+        float: none
+    }
+    
+    .creative .creative-info .info-dir {
+        font-size: 30px
+    }
+}
+
+/*
+    ===============================
+            Socail Styles
+    ===============================
+*/
+
+.social-media {
+    height: auto;
+    overflow: hidden
+}
+
+.social-media .social {
+    width: 33.33%;
+    float: left;
+    box-sizing: border-box;
+    padding: 100px 0 100px 60px
+}
+
+
+.social-media .social.face {
+    background: #3b5998;
+}
+
+.social-media .social.twitter {
+    background: #498cbf;
+}
+
+.social-media .social.pin {
+    background: #cc2127;
+}
+
+.social-media .social .icon {
+    width: 50px;
+    height: 50px;
+    background: #fff;
+    text-align: center;
+    line-height: 50px;
+    color: #888;
+    float: left;
+    margin-right: 10px
+}
+
+.social-media .social p {
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 20px;
+    color: #fff
+}
+
+.social-media .social p span {
+    display: block;
+    margin-bottom: 8px
+}
+
+.social-media .social p span.info2 {
+    font-weight: normal
+}
+
+@media (max-width:991px) {
+    .social-media .social {
+        width: 100%;
+        float: none;
+    }
+}
+
+/*
+    ===============================
+            Drop Styles
+    ===============================
+*/
+
+.drop {
+    padding: 50px 0;
+    text-align: center
+}
+
+.drop .drop-title {
+    font-size: 60px;
+    margin-bottom: 30px
+}
+
+.drop .drop-title span {
+    font-weight: normal
+}
+
+.drop form {
+    width: 70%;
+    margin: auto;
+}
+
+.drop form input {
+    box-sizing: border-box;
+    outline: 0;
+    padding: 5px;
+    margin-bottom: 10px
+}
+
+.drop form .form-input {
+    overflow: hidden
+}
+
+.drop form .form-input input {
+    width: 49%;
+}
+
+.drop form .form-input input[type=text] {
+    float: left
+}
+
+.drop form .form-input input[type=email] {
+    float: right
+}
+
+.drop form input.sub {
+    width: 100%;
+}
+
+.drop form textarea {
+    width: 100%;
+    outline: 0;
+    background: #ccc
+}
+
+.drop form input[type=submit] {
+    width: 60%;
+    background: #fff;
+    border: 1px solid #ccc;
+    color: #888;
+    cursor: pointer
+}
+
+@media (max-width:575px) {
+    .drop .drop-title {
+        font-size: 40px
+    }
+    
+    .drop form .form-input input {
+        width: 100%
+    }
+    
+    .drop form {
+        width: 90%
+    }
+}
+
+/*
+    ===============================
+            Drop Styles
+    ===============================
+*/
+
+.footer {
+    text-align: center;
+    padding: 10px 0;
+}
+
+.footer p {
+    color: #888
+}
+
